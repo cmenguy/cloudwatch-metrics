@@ -9,6 +9,13 @@ There are 2 different metrics handlers:
 
 Once sent, metrics will be available in the CloudWatch UI after a few minutes.
 
+Dependencies
+------------
+
+ - AWS SDK >= 1.5.3
+ - Guava >= 14.0.1
+ - CDH 4.3.1
+
 Options
 -------
 
@@ -22,9 +29,15 @@ The following options are available in both interfaces:
 Setup
 -----
 
-To create a jar, run:
+To package the classes and dependencies into a single jar (except the Hadoop classes), run:
 
     mvn package
+
+Update your **hadoop-env.sh** file and include the following:
+
+    export HADOOP_CLASSPATH="/path/to/cloudwatch-metrics-[version].jar"
+
+Restart your services for this change to take effect.
 
 CloudWatchContext
 -----------------
