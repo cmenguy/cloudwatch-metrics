@@ -66,6 +66,7 @@ public class CloudWatchSink implements MetricsSink {
                     .withNamespace(_namespace).withMetricData(partition);
             _client.putMetricData(req);
         }
+        _metrics.clear();
     }
 
     @Override
