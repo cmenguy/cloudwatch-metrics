@@ -44,6 +44,12 @@ CloudWatchContext
 
 To enable metrics, update **hadoop-metrics.properties** to use `CloudWatchContext`, for example:
 
+    namenode.class=org.apache.hadoop.metrics.graphite.GraphiteContext
+    namenode.period=10
+    namenode.accesskey=[accessKey]
+    namenode.secretkey=[secretKey]
+    namenode.region=us-east-1
+
 CloudWatchSink
 --------------
 
