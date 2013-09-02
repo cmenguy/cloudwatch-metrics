@@ -44,7 +44,7 @@ CloudWatchContext
 
 To enable metrics, update **hadoop-metrics.properties** to use `CloudWatchContext`, for example:
 
-    namenode.class=org.apache.hadoop.metrics.graphite.GraphiteContext
+    namenode.class=org.apache.hadoop.metrics.cloudwatch.CloudWatchContext
     namenode.period=10
     namenode.accesskey=[accessKey]
     namenode.secretkey=[secretKey]
@@ -55,7 +55,7 @@ CloudWatchSink
 
 To enable metrics, update **hadoop-metrics2.properties** to use `CloudWatchSink`, for example:
 
-    *.sink.cloudwatch.class=com.wiley.ptl.hadoop.samples.chapter16.CloudWatchSink
+    *.sink.cloudwatch.class=org.apache.hadoop.metrics2.cloudwatch.CloudWatchSink
     *.period=10
     namenode.sink.cloudwatch.accesskey=[accessKey]
     namenode.sink.cloudwatch.secretkey=[secretKey]
