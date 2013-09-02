@@ -24,7 +24,8 @@ The following options are available in both interfaces:
  - accesskey: Your personal AWS access key.
  - secretkey: Your personal AWS secret key.
  - region: The AWS region ID.
- - batch: The maximum number of metrics to send in a single AWS request.
+ - namespace: The CloudWatch namespace. Defaults to "Custom".
+ - batch: The maximum number of metrics to send in a single AWS request. Defaults to 5.
 
 Setup
 -----
